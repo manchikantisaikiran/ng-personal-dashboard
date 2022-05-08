@@ -1,0 +1,52 @@
+@import "libs/styles/primary.scss";
+
+.experience__section {
+  width: 80%;
+  margin: auto;
+  .experience__container {
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .experience{
+        position: relative;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            left: 0;
+            top: 7.5px;
+            z-index: 10;
+        }
+        &::after{
+            content: "";
+            height: 100%;
+            border-right: 1px dashed $color-primary-lighter;
+            position: absolute;
+            left: 4.5px;
+            top: 7.5px;
+        }
+        .role{
+            color: $color-title;
+            font-size: $normal-font-size;
+            font-weight: $semi-bold-font;
+        }
+        .company__details{
+            // font-size: $smaller-font-size;
+            font-weight: $medium-font;
+            font-size: 0.65rem;
+        }
+        .time__period{
+            font-size: $smaller-font-size;
+            font-weight: $regular-font;
+            font-size: 0.5rem;
+        }
+    }
+  }
+}

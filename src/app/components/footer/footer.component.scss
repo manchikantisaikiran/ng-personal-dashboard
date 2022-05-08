@@ -1,0 +1,50 @@
+@import "libs/styles/primary.scss";
+
+footer {
+  background-color: $color-primary;
+  padding: 2rem;
+  color: white;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer__title {
+    font-size: $normal-font-size;
+    font-weight: $bold-font;
+  }
+  .footer__subtitle {
+    font-size: $small-font-size;
+    font-weight: $medium-font;
+  }
+  .page__link {
+    a {
+      cursor: pointer;
+      color: white !important;
+      font-size: $smaller-font-size;
+      font-weight: $regular-font;
+    }
+  }
+  .social__links {
+    display: flex;
+    gap: 1rem;
+    a {
+      color: white !important;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 80%;
+      margin: auto;
+    }
+    .page__link{
+        display: flex;
+        gap: 1rem;
+    }
+  }
+}

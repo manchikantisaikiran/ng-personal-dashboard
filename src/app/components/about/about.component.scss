@@ -1,0 +1,29 @@
+@import "libs/styles/primary.scss";
+
+.about__section {
+  height: 100vh;
+  .section__description{
+    margin-top: 3.5rem;
+    text-align: center;
+  }
+  .about__me {
+    width: 80%;
+    margin: auto;
+  }
+  .past__experience {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: $m-3 0;
+    .experience__num {
+      font-weight: $bold-font;
+      font-size: $big-font-size;
+      color: $color-title;
+    }
+  }
+  .contact__btn__container{
+      display: flex;
+      justify-content: center;
+  }
+}

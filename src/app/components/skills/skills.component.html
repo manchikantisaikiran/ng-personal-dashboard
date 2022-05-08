@@ -1,0 +1,31 @@
+<section class="section" id="skills">
+    <div class="skills__section">
+        <div class="section__title">Skills</div>
+        <div class="section__subtitle">My Technical Level</div>
+        
+        <div class="skills__container">
+            <div class="skills__content" *ngFor="let skillCategory of skills" [ngClass]="{'skills__active':setActiveClassTo === skillCategory.skillCategory}">
+                <div class="skills__header" (click)="setActiveClassTo = skillCategory.skillCategory">
+                    <i class="uil icon" [ngClass]="[skillCategory.skillIconClass]"></i>
+                    <div class="skill__description">
+                        <div class="skill__title">{{skillCategory.skillCategory}}</div>
+                        <div class="skill__subtitle">{{skillCategory.skillDescription}}</div>
+                    </div>
+                    <i class="uil uil-angle-down"></i>
+                </div>
+                <div class="skills__list">
+                    <div *ngFor="let skillList of skillCategory.skillList">
+                        <div class="skill__data">
+                            <div class="skill__title">{{skillList.skill}}</div>
+                            <div class="skill__level">{{skillList.skillPercentage}}</div>
+                        </div>
+                        <div class="skills__progress__bar">
+                            <div class="skills__percentage" [ngStyle]="{'width': skillList.skillPercentage}"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,136 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import "libs/styles/primary.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+//Reusable classes
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: $normal-font-size;
+  background-color: $bg-body-color;
+  color: $color-text;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $color-title;
+  font-size: $heading-font-size;
+  font-weight: $semi-bold-font;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+.section__title {
+  font-size: $heading-font-size;
+  font-weight: $bold-font;
+  margin-bottom: $m-0-25;
+  color: $color-title;
+}
+
+.section__subtitle {
+  font-size: $normal-font-size;
+  font-weight: $semi-bold-font;
+  margin-bottom: $m-0-5;
+}
+
+.section__description {
+  font-size: $smaller-font-size;
+  font-weight: $medium-font;
+  margin-bottom: $m-0-75;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  gap: 0.5rem;
+  font-size: $normal-font-size;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn__primary{
+  background: $color-primary;
+  color: white;
+  &:hover{
+    background-color: $color-primary-hover;
+  }
+}
+
+.text__start {
+  text-align: start !important;
+}
+
+.text__center {
+  text-align: center !important;
+}
+
+.text__end {
+  text-align: end !important;
+}
+
+.icon {
+  color: $color-primary !important;
+  font-size: 1.2rem;
+  a{
+    color: $color-primary !important;
+  }
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+::-webkit-scrollbar{
+  width: .60rem;
+  background-color: $color-scroll-bar;
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: $color-scroll-thumb-bar;
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: $color-text-light;
+}

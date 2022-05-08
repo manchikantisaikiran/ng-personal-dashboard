@@ -1,0 +1,83 @@
+
+@import "libs/styles/primary.scss";
+
+.intro__section{
+  height: 100vh;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 220px 1fr;
+  margin: 0 auto;
+  gap: 1rem;
+  height: 80vh;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .intro__description {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    .contact__btn__container {
+      .contact__me__btn {
+        margin: 1.5rem 0;
+      }
+    }
+  }
+
+  .profile-img-container {
+    width: 200px;
+    .blob {
+      fill: $color-primary;
+    }
+    .profile-img {
+      width: 175px;
+    }
+  }
+}
+
+.scroll__down__container {
+  width: 80%;
+  margin: auto;
+  .scroll__down {
+    display: flex;
+    gap: 0.05rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: auto;
+    cursor: pointer;
+    color: $color-primary;
+    transition: transform 250ms ease-in-out;
+    width: max-content;
+    .mouse-icon {
+      font-size: 1.75rem;
+    }
+    &:hover {
+      color: $color-primary-hover;
+      transform: scale(0.99) translateY(5px);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .intro {
+    grid-template-columns: 50px 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    .intro__description {
+        grid-column: 2 / span 1;
+        grid-row: 1;
+    }
+  }
+  .scroll__down{
+      margin-left: 66px;
+  }
+}

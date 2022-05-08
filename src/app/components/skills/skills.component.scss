@@ -1,0 +1,86 @@
+@import "libs/styles/primary.scss";
+
+.skills__section {
+  width: 80%;
+  margin: auto;
+  .skills__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    gap: 1.5rem;
+    margin: 2rem auto;
+    .icon {
+      font-size: 1.75rem !important;
+    }
+    .skills__content {
+      overflow: hidden;
+      .skills__header {
+        display: flex;
+        gap: 1rem;
+        cursor: pointer;
+        .skill__description {
+          flex-grow: 1;
+          .skill__title {
+            font-size: $normal-font-size;
+            font-weight: $bold-font;
+            color: $color-title;
+          }
+          .skill__subtitle {
+            white-space: nowrap;
+            font-size: $smaller-font-size;
+            font-weight: $medium-font;
+          }
+        }
+        .uil-angle-down {
+          &::before {
+            transition: transform 250ms ease-in-out;
+          }
+          font-size: 1.4rem;
+        }
+      }
+      .skills__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        visibility: hidden;
+        height: 0px;
+        max-height: 0px;
+        padding-left: 3rem;
+        transition: all 250ms ease-in-out;
+        .skill__data {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: $m-0-25;
+          .skill__title {
+            color: $color-title;
+            font-weight: $semi-bold-font;
+          }
+        }
+        .skills__progress__bar {
+          background-color: $color-primary-lighter;
+          height: 5px;
+          border-radius: 0.25rem;
+          .skills__percentage {
+            background-color: $color-primary;
+            border-radius: 0.25rem;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.skills__active {
+  .uil-angle-down::before {
+    transform: rotate(180deg);
+  }
+  .skills__list {
+    height: auto !important;
+    padding: 1.5rem 0 1rem;
+    visibility: visible !important;
+    max-height: 300px !important;
+    // max-height: 200px !important;
+    // transform: scaleY(1) !important;
+  }
+}

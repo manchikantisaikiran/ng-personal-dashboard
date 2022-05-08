@@ -1,0 +1,93 @@
+$color-primary: var(--primary);
+$color-primary-lighter: var(--primary-lighter);
+$color-primary-hover: var(--primary-hover);
+$color-title: var(--title-color);
+$color-text: var(--text-color);
+$color-text-light: var(--text-color-light);
+
+$color-scroll-bar: var(--scroll-bar-color); 
+$color-scroll-thumb-bar: var(--scroll-thumb-color); 
+
+$bg-body-color: var(--bg-body-color);
+$bg-input-color: var(--bg-input-color);
+$bg-container-color: var(--bg-container-color);
+
+//font-weight
+$extra-light-font: var(--extra-light-font);
+$light-font: var(--light-font);
+$regular-font: var(--regular-font);
+$medium-font: var(--medium-font);
+$semi-bold-font: var(--semi-bold-font);
+$bold-font: var(--bold-font);
+$extra-bold-font: var(--extra-bold-font);
+
+//fonts size
+$big-font-size: var(--big-font-size);
+$heading-font-size: var(--heading-font-size);
+$normal-font-size: var(--normal-font-size);
+$small-font-size: var(--small-font-size);
+$smaller-font-size: var(--smaller-font-size);
+
+//margins
+$m-0-25: var(--m-0-25);
+$m-0-5: var(--m-0-5);
+$m-0-75: var(--m-0-75);
+$m-1:var(--m-1);
+$m-1-5: var(--m-1-5);
+$m-2:var(--m-2);
+$m-2-5: var(--m-2-5);
+$m-3:var(--m-3);
+
+:root {
+  --hue-color: 250;
+
+  --primary: hsl(var(--hue-color), 69%, 61%);
+  --primary-lighter: hsl(var(--hue-color), 92%, 85%);
+  --primary-hover: hsl(var(--hue-color), 57%, 53%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+
+  //scroll bar colors
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+  //background colors
+  --bg-body-color: hsl(var(--hue-color), 60%, 99%);
+  --bg-input-color: hsl(var(--hue-color), 70%, 96%);
+  --bg-container-color: #fff;
+
+  //fonts
+  --extra-light-font: 200;
+  --light-font: 300;
+  --regular-font: 400;
+  --medium-font: 500;
+  --semi-bold-font: 600;
+  --bold-font: 700;
+  --extra-bold-font: 800;
+
+  --big-font-size: 2rem;
+  --heading-font-size: 1.5rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+
+  --m-0-25: 0.25rem;
+  --m-0-5: 0.5rem;
+  --m-0-75: 0.75rem;
+  --m-1: 1rem;
+  --m-1-5: 1.5rem;
+  --m-2: 2rem;
+  --m-2-5: 2.5rem;
+  --m-3: 3rem;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --heading-font-size: 2rem;
+    --normal-font-size: 1.3rem;
+    --small-font-size: 1rem;
+    --smaller-font-size: 0.873rem;
+  }
+}
