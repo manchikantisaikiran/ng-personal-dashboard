@@ -10,7 +10,8 @@
     "dev:ssr": "ng run personal-portfolio:serve-ssr",
     "serve:ssr": "node dist/personal-portfolio/server/main.js",
     "build:ssr": "ng build && ng run personal-portfolio:server",
-    "prerender": "ng run personal-portfolio:prerender"
+    "prerender": "ng run personal-portfolio:prerender",
+    "i18n:extract": "ng extract-i18n --output-path src/locale"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +21,7 @@
     "@angular/core": "~12.1.0-",
     "@angular/fire": "^7.3.0",
     "@angular/forms": "~12.1.0-",
+    "@angular/localize": "^13.3.6",
     "@angular/platform-browser": "~12.1.0-",
     "@angular/platform-browser-dynamic": "~12.1.0-",
     "@angular/platform-server": "~12.1.0-",
